@@ -25,3 +25,22 @@ int distance=0;
 String statusLED1="MATI";
 String statusLED2="MATI";
 String statusBuzzer="MATI";
+
+//================ WEB ==================
+
+
+//================ TASK SENSOR ==================
+
+
+//================ TASK OUTPUT ==================
+
+
+// LOGIKA
+
+//================ TASK WEB ==================
+
+// WIFI
+
+// WEB
+
+// RTOS
