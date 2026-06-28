@@ -40,20 +40,20 @@ Sistem juga dilengkapi dengan LED sebagai indikator visual serta buzzer sebagai 
 
 # 3. Fitur
 
-### 1. Monitoring jarak air secara real-time
+#### 1. Monitoring jarak air secara real-time
 
    Pengambilan data jarak air secara real-time menggunakan sensor ultrasonik untuk memastikan akurasi ketersediaan air.
-### 2. Indikator LED berdasarkan kondisi jarak
+#### 2. Indikator LED berdasarkan kondisi jarak
 
    LED memberikan feedback saat perubahan status terjadi berdasarkan jarak ketersediaan air yang telah ditentukan.
-### 3. Alarm buzzer otomatis
+#### 3. Alarm buzzer otomatis
 
    Notifikasi suara otomatis sebagai peringatan dini saat ketersediaan air hampir habis.
-### 4. Web dashboard berbasis HTTP
+#### 4. Web dashboard berbasis HTTP
 
    Menyajikan data status sistem dalam format JSON yang ringan, memungkinkan integrasi mudah dengan antarmuka pengguna berbasis web.
-### 5. Implementasi RTOS (Real-Time Operating System)
+#### 5. Implementasi RTOS (Real-Time Operating System)
 
    Mengimplementasikan RTOS (Real-Time Operating System) untuk menjalankan tugas sensor dan penanganan server secara bersamaan, sehingga sistem tetap responsif       dan stabil tanpa lag.
-### 6. Monitoring melalui smartphone dan laptop
+#### 6. Monitoring melalui smartphone dan laptop
    Monitoring status galon secara fleksibel dari berbagai perangkat seperti smartphone atau laptop selama terhubung dalam satu jaringan WiFi lokal yang sama.
