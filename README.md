@@ -51,7 +51,7 @@ Sistem juga dilengkapi dengan LED sebagai indikator visual serta buzzer sebagai 
    Notifikasi suara otomatis sebagai peringatan dini saat ketersediaan air hampir habis.
 #### 4. Web dashboard berbasis HTTP
 
-   Menyajikan data status sistem dalam format JSON yang ringan, memungkinkan integrasi mudah dengan antarmuka pengguna berbasis web.
+   Menyajikan data status sistem dalam format JSON dengan antarmuka pengguna berbasis web.
 #### 5. Implementasi RTOS (Real-Time Operating System)
 
    Mengimplementasikan RTOS (Real-Time Operating System) untuk menjalankan tugas sensor dan penanganan server secara bersamaan, sehingga sistem tetap responsif       dan stabil tanpa lag.
