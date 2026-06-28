@@ -36,6 +36,35 @@ String statusBuzzer="MATI";
 
 
 // LOGIKA
+if(distance>=2 && distance<=5)
+{
+digitalWrite(ledBiru,HIGH);
+
+statusLED1="NYALA";
+}
+
+
+if(distance>=7 && distance<=14)
+{
+digitalWrite(ledDua,HIGH);
+
+statusLED2="NYALA";
+}
+
+
+if(distance>30 || distance==0)
+{
+digitalWrite(buzzerPin,HIGH);
+
+statusBuzzer="NYALA";
+}
+
+
+vTaskDelay(
+500/portTICK_PERIOD_MS);
+
+}
+}
 
 //================ TASK WEB ==================
 
