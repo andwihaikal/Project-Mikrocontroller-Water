@@ -69,6 +69,21 @@ vTaskDelay(
 //================ TASK WEB ==================
 
 // WIFI
+WiFi.begin(ssid,password);
+
+while(
+WiFi.status()!=WL_CONNECTED)
+{
+delay(500);
+
+Serial.print(".");
+}
+
+Serial.println("");
+Serial.println("Connected");
+
+Serial.print("IP:");
+Serial.println(WiFi.localIP());
 
 // WEB
 
