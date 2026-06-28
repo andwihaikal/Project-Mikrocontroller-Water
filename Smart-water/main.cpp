@@ -29,7 +29,149 @@ String statusBuzzer="MATI";
 //================ WEB ==================
 
 
+String webpage()
+{
+return
+"<html>"
+
+"<head>"
+
+"<meta http-equiv='refresh' content='2'>"
+
+"<meta name='viewport' content='width=device-width, initial-scale=1'>"
+
+"<style>"
+
+"*{margin:0;padding:0;box-sizing:border-box;}"
+
+"body{"
+"font-family:Arial;"
+"background:linear-gradient(135deg,#0F172A,#1E293B);"
+"height:100vh;"
+"display:flex;"
+"justify-content:center;"
+"align-items:center;"
+"color:white;"
+"}"
+
+".container{"
+"width:380px;"
+"padding:25px;"
+"border-radius:20px;"
+"background:rgba(255,255,255,0.1);"
+"backdrop-filter:blur(10px);"
+"box-shadow:0px 0px 20px rgba(0,0,0,0.4);"
+"text-align:center;"
+"}"
+
+"h1{"
+"margin-bottom:20px;"
+"font-size:28px;"
+"}"
+
+".card{"
+"background:white;"
+"color:black;"
+"padding:15px;"
+"margin-top:15px;"
+"border-radius:15px;"
+"font-size:18px;"
+"font-weight:bold;"
+"}"
+
+".jarak{"
+"font-size:30px;"
+"color:#2563EB;"
+"}"
+
+".nyala{"
+"color:green;"
+"}"
+
+".mati{"
+"color:red;"
+"}"
+
+"</style>"
+
+"</head>"
+
+"<body>"
+
+"<div class='container'>"
+
+"<h1> Smart Galon Monitor</h1>"
+
+"<div class='card'>"
+"Jarak Air"
+"<br><br>"
+"<span class='jarak'>"
++String(distance)+
+" cm</span>"
+"</div>"
+
+"<div class='card'>"
+"LED Biru : "
++statusLED1+
+"</div>"
+
+"<div class='card'>"
+"LED Kedua : "
++statusLED2+
+"</div>"
+
+"<div class='card'>"
+"Buzzer : "
++statusBuzzer+
+"</div>"
+
+"<br>"
+"<small>Update otomatis setiap 2 detik</small>"
+
+"</div>"
+
+"</body>"
+
+"</html>";
+}
+
+
+
 //================ TASK SENSOR ==================
+
+void TaskSensor(void *pvParameters)
+{
+while(true)
+{
+
+digitalWrite(trigPin,LOW);
+delayMicroseconds(2);
+
+digitalWrite(trigPin,HIGH);
+delayMicroseconds(10);
+
+digitalWrite(trigPin,LOW);
+
+duration=
+pulseIn(
+echoPin,
+HIGH,
+30000);
+
+if(duration!=0)
+{
+distance=
+duration*0.034/2;
+}
+
+Serial.print("Jarak:");
+Serial.println(distance);
+
+vTaskDelay(
+500/portTICK_PERIOD_MS);
+
+}
+}
 
 
 //================ TASK OUTPUT ==================
