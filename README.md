@@ -38,8 +38,6 @@ Sistem juga dilengkapi dengan LED sebagai indikator visual serta buzzer sebagai 
 
 ---
 
----
-
 # 3. Fitur
 
 ### 1. Monitoring jarak air secara real-time
@@ -58,5 +56,4 @@ Sistem juga dilengkapi dengan LED sebagai indikator visual serta buzzer sebagai 
 
    Mengimplementasikan RTOS (Real-Time Operating System) untuk menjalankan tugas sensor dan penanganan server secara bersamaan, sehingga sistem tetap responsif       dan stabil tanpa lag.
 ### 6. Monitoring melalui smartphone dan laptop
-
    Monitoring status galon secara fleksibel dari berbagai perangkat seperti smartphone atau laptop selama terhubung dalam satu jaringan WiFi lokal yang sama.
