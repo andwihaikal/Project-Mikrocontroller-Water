@@ -175,6 +175,18 @@ vTaskDelay(
 
 
 //================ TASK OUTPUT ==================
+void TaskOutput(void *pvParameters)
+{
+while(true)
+{
+
+digitalWrite(ledBiru,LOW);
+digitalWrite(ledDua,LOW);
+digitalWrite(buzzerPin,LOW);
+
+statusLED1="MATI";
+statusLED2="MATI";
+statusBuzzer="MATI";
 
 
 // LOGIKA
@@ -209,6 +221,36 @@ vTaskDelay(
 }
 
 //================ TASK WEB ==================
+void TaskWeb(void *pvParameters)
+{
+
+while(true)
+{
+
+server.handleClient();
+
+vTaskDelay(
+100/portTICK_PERIOD_MS);
+
+}
+
+}
+
+
+
+void setup()
+{
+
+Serial.begin(115200);
+
+pinMode(trigPin,OUTPUT);
+pinMode(echoPin,INPUT);
+
+pinMode(ledBiru,OUTPUT);
+pinMode(ledDua,OUTPUT);
+
+pinMode(buzzerPin,OUTPUT);
+
 
 // WIFI
 WiFi.begin(ssid,password);
@@ -229,4 +271,48 @@ Serial.println(WiFi.localIP());
 
 // WEB
 
+server.on(
+"/",
+[]()
+{
+server.send(
+200,
+"text/html",
+webpage());
+});
+
+server.begin();
+
+
 // RTOS
+
+xTaskCreate(
+TaskSensor,
+"Sensor",
+2048,
+NULL,
+1,
+NULL);
+
+xTaskCreate(
+TaskOutput,
+"Output",
+2048,
+NULL,
+1,
+NULL);
+
+xTaskCreate(
+TaskWeb,
+"Web",
+4096,
+NULL,
+1,
+NULL);
+
+}
+
+void loop()
+{
+
+}
