@@ -41,9 +41,3 @@ Sistem juga dilengkapi dengan LED sebagai indikator visual serta buzzer sebagai 
 - Memberikan alarm menggunakan buzzer.
 - Mengimplementasikan HTTP Server pada ESP32.
 - Mengimplementasikan RTOS (Real-Time Operating System).
-
----
-
-
-```text
-2 cm – 5 cm
