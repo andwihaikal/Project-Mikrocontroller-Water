@@ -6,9 +6,9 @@ Project untuk mata kuliah Sistem Mikrocontroller- Kelompok 9
 2. Mochammad Andwi Haikal (23552011011)
 
 
-# Smart Galon Monitoring System
+# Smart Water Monitoring System
 
-Prototype monitoring ketersediaan air galon berbasis ESP32 dan sensor HC-SR04 yang dapat memantau kondisi air secara real-time menggunakan Web Dashboard, indikator LED, dan buzzer.
+Prototype monitoring ketersediaan air  berbasis ESP32 dan sensor HC-SR04 yang dapat memantau kondisi air secara real-time menggunakan Web Dashboard, indikator LED, dan buzzer.
 
 **ESP32 WeMos • HC-SR04 • LED • Buzzer • Web Dashboard • HTTP • FreeRTOS**
 
@@ -16,7 +16,7 @@ Prototype monitoring ketersediaan air galon berbasis ESP32 dan sensor HC-SR04 ya
 
 # 1. Gambaran Umum
 
-Smart Galon Monitoring System merupakan sistem monitoring sederhana yang dirancang untuk mengetahui kondisi ketersediaan air pada galon secara otomatis. Sistem menggunakan sensor ultrasonik HC-SR04 untuk mengukur jarak antara sensor dan permukaan air.
+Smart WaterMonitoring System merupakan sistem monitoring sederhana yang dirancang untuk mengetahui kondisi ketersediaan air  secara otomatis. Sistem menggunakan sensor ultrasonik HC-SR04 untuk mengukur jarak antara sensor dan permukaan air.
 
 Data hasil pembacaan sensor diproses oleh ESP32 WeMos untuk menentukan status kondisi air berdasarkan jarak yang terdeteksi. Informasi tersebut kemudian ditampilkan secara real-time melalui Web Dashboard yang dapat diakses menggunakan smartphone maupun laptop yang berada dalam jaringan yang sama.
 
