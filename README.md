@@ -2,7 +2,7 @@
 Project untuk mata kuliah Sistem Mikrocontroller- Kelompok 9
 
 # Nama Anggota:
-1. Cindy Marcellina
+1. Cindy Marcellina (23552011031)
 2. Mochammad Andwi Haikal (23552011011)
 3. Muhammad Ilham Abdul Halim (23552011266)
 
